@@ -42,7 +42,7 @@ public class Product_service {
 
         List<Product> pro = new ArrayList<Product>();
         for (Product product : products) {
-            if (Year.now().getValue() <= product.getWranty()) {
+            if (Year.now().getValue() > product.getWranty()) {
                 pro.add(product);
             }
         }
